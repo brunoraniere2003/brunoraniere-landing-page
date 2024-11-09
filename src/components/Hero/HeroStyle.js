@@ -35,7 +35,7 @@ export const HeroContainer = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.55);
     z-index: 0;
   }
 
