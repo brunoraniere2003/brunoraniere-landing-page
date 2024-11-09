@@ -10,8 +10,8 @@ export const HeroContainer = styled.section`
   justify-content: center; /* Centraliza todos os elementos verticalmente */
   align-items: center;
   text-align: center;
-  padding: 100px 20px;
-  height: 70vh;
+  padding: 100px 20px 120px;
+  height: 80vh;
   position: relative;
   overflow: hidden;
   max-width: 100vw;
@@ -35,7 +35,7 @@ export const HeroContainer = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
   }
 
@@ -62,7 +62,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.p`
   color: ${colors.text};
   font-size: 1.1em;
-  margin-bottom: 1.2em;
+  margin-bottom: 19em;
   z-index: 1;
 
   @media (max-width: 768px) {

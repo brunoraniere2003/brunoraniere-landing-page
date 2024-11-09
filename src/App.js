@@ -8,6 +8,8 @@ import Valores from './components/Valores/Valores';
 import Curiosidades from './components/Curiosidades/Curiosidades';
 import EmBreve from './components/EmBreve/EmBreve';
 import RedesSociais from './components/RedesSociais/RedesSociais';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
@@ -21,7 +23,6 @@ function App() {
       <Curiosidades />
       <EmBreve />
       <RedesSociais />
-      {/* Outras seções aqui */}
     </>
   );
 }
