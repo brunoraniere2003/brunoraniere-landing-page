@@ -51,9 +51,10 @@ export const CardFront = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* Safari fix */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: rotateY(0deg);
 `;
 
 export const CardBack = styled.div`
@@ -66,7 +67,7 @@ export const CardBack = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* Safari fix */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
