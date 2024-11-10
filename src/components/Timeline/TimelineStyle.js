@@ -17,6 +17,7 @@ export const TimelineContainer = styled.section`
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
+  position: relative; /* Para posicionar as setas */
 `;
 
 export const SectionTitle = styled.h2`
@@ -39,6 +40,8 @@ export const Card = styled.div`
   transform: ${({ flipped }) => (flipped ? "rotateY(180deg)" : "rotateY(0deg)")};
   border: 2px solid ${colors.highlight};
   border-radius: 10px;
+  // padding: 20px; /* Adiciona padding para evitar sobreposição */
+  box-sizing: border-box;
 `;
 
 export const CardFront = styled.div`
@@ -71,12 +74,13 @@ export const CardBack = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
-  padding: 10px;
+  padding: 25px;
   overflow-y: auto;
 `;
 
 export const CardTitle = styled.h3`
   font-size: 1.5em;
+  padding: 0 40px;
   color: ${colors.highlight};
 `;
 
@@ -96,4 +100,27 @@ export const CardBackSubtitle = styled.p`
   font-size: 0.9em;
   color: ${colors.highlight};
   animation: ${pulse} 2.1s ease-in-out infinite; /* Animação de pulsação */
+`;
+
+// Estilos das setas de navegação
+export const Arrow = styled.div`
+  position: absolute;
+  top: 50%;
+  font-size: 2em;
+  color: ${colors.highlight}; /* Define a cor da seta */
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  &:hover {
+    color: ${colors.highlightHover}; /* Cor da seta ao passar o mouse */
+  }
+`;
+
+export const ArrowLeft = styled(Arrow)`
+  left: -45px; /* Afasta a seta da borda esquerda */
+`;
+
+export const ArrowRight = styled(Arrow)`
+  right: -45px; /* Afasta a seta da borda direita */
 `;
