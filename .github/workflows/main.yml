@@ -16,6 +16,5 @@ jobs:
         host: ${{ secrets.HOST }} 
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASS }}
-        localDir: "build"  # Verifique se o diretório está correto
         remoteDir: "public_html"  # Altere conforme o diretório remoto correto
         forceSsl: false  # Desativa SSL
