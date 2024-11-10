@@ -1,8 +1,10 @@
+// RedesSociaisStyle.js
+
 import styled from 'styled-components';
 import { colors } from '../../styles/variables';
 
 export const RedesContainer = styled.section`
-  padding: 60px 20px;
+  padding: 60px 20px 75px; /* Aumenta o padding inferior para 100px */
   background-color: ${colors.background};
   text-align: center;
 `;
