@@ -72,6 +72,7 @@ export const CardTitle = styled.h3`
 
 export const CardSubtitle = styled.p`
   font-size: 0.9em;
+  margin-top: 5px;
   color: ${colors.text};
 `;
 
