@@ -40,7 +40,6 @@ export const Card = styled.div`
   transform: ${({ flipped }) => (flipped ? "rotateY(180deg)" : "rotateY(0deg)")};
   border: 2px solid ${colors.highlight};
   border-radius: 10px;
-  // padding: 20px; /* Adiciona padding para evitar sobreposição */
   box-sizing: border-box;
 `;
 
@@ -102,25 +101,30 @@ export const CardBackSubtitle = styled.p`
   animation: ${pulse} 2.1s ease-in-out infinite; /* Animação de pulsação */
 `;
 
-// Estilos das setas de navegação
 export const Arrow = styled.div`
-  position: absolute;
-  top: 50%;
-  font-size: 2em;
-  color: ${colors.highlight}; /* Define a cor da seta */
+  position: absolute !important;
+  top: 50% !important;
+  height: 50% !important;  /* Define uma altura menor, como 50% */
+  width: 80px !important; // Largura da área de clique
+  font-size: 2em !important;
+  color: ${colors.highlight} !important;
   cursor: pointer;
-  transform: translateY(-50%);
-  z-index: 2;
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: color 0.2s;
 
   &:hover {
-    color: ${colors.highlightHover}; /* Cor da seta ao passar o mouse */
+    color: ${colors.highlightHover} !important;
   }
 `;
 
 export const ArrowLeft = styled(Arrow)`
-  left: -45px; /* Afasta a seta da borda esquerda */
+  left: -80px !important; /* Afasta a seta da borda esquerda */
 `;
 
 export const ArrowRight = styled(Arrow)`
-  right: -45px; /* Afasta a seta da borda direita */
+  right: -80px !important; /* Afasta a seta da borda direita */
 `;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import { TimelineContainer, SectionTitle, CardWrapper, Card, CardFront, CardBack, CardTitle, CardSubtitle, CardDescription, CardBackSubtitle } from './TimelineStyle';
+import { TimelineContainer, SectionTitle, CardWrapper, Card, CardFront, CardBack, CardTitle, CardSubtitle, CardDescription, CardBackSubtitle, ArrowLeft, ArrowRight } from './TimelineStyle';
 import { colors } from '../../styles/variables';
 
 // Componentes para as setas
@@ -13,12 +13,14 @@ const Arrow = ({ onClick, direction }) => (
       justifyContent: 'center',
       position: 'absolute',
       top: '50%',
-      [direction]: '25px', // Afastamento maior da borda
+      height: '100%', // Ocupa toda a altura do cartão
+      width: '40px', // Define uma largura fixa para a área de clique da seta
+      [direction]: '10px', // Afastamento da borda
       transform: 'translateY(-50%)',
       zIndex: 2,
       cursor: 'pointer',
-      fontSize: '2em', // Aumenta um pouco o tamanho para melhor visibilidade
-      color: colors.highlight, // Cor das setas usando o "highlight"
+      fontSize: '2em', // Aumenta o tamanho da seta
+      color: colors.highlight, // Cor das setas
     }}
   >
     {direction === 'left' ? '<' : '>'}
@@ -45,7 +47,7 @@ const Timeline = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "0px", // Remove o padding para esconder cards laterais
+    centerPadding: "0px",
     prevArrow: <Arrow direction="left" />,
     nextArrow: <Arrow direction="right" />,
   };

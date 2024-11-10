@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #1c1c1e; /* Fundo escuro */
     color: #fff; /* Texto padrão */
     font-family: 'Roboto Mono', monospace;
-    scroll-behavior: smooth; /* Adiciona rolagem suave */
+    scroll-behavior: smooth;
   }
 
   a {
