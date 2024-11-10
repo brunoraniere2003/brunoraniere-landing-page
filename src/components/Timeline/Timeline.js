@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import { TimelineContainer, SectionTitle, CardWrapper, Card, CardFront, CardBack, CardTitle, CardSubtitle, CardDescription, CardBackSubtitle, ArrowLeft, ArrowRight } from './TimelineStyle';
+import { TimelineContainer, SectionTitle, CardWrapper, Card, CardFront, CardBack, CardTitle, CardSubtitle, CardDescription, CardBackSubtitle } from './TimelineStyle';
 import { colors } from '../../styles/variables';
 
 // Componentes para as setas
@@ -13,13 +13,13 @@ const Arrow = ({ onClick, direction }) => (
       justifyContent: 'center',
       position: 'absolute',
       top: '50%',
-      height: '100%', // Ocupa toda a altura do cartão
-      width: '40px', // Define uma largura fixa para a área de clique da seta
-      [direction]: '10px', // Afastamento da borda
+      height: '40%', // Ajusta altura da área de clique
+      width: '50px', // Ajusta largura da área de clique
+      [direction]: '10px', // Distância da borda
       transform: 'translateY(-50%)',
       zIndex: 2,
       cursor: 'pointer',
-      fontSize: '2em', // Aumenta o tamanho da seta
+      fontSize: '2em', // Tamanho da seta
       color: colors.highlight, // Cor das setas
     }}
   >
