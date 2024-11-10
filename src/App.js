@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Inicializa o AOS
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
@@ -19,7 +19,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Hero />
-
+      
       {/* Seção da Timeline com animação */}
       <section id="timeline" data-aos="fade-up">
         <Timeline />

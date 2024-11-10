@@ -11,7 +11,7 @@ export const TimelineContainer = styled.section`
 
 export const SectionTitle = styled.h2`
   font-size: 2em;
-  color: ${colors.highlight};
+  // color: ${colors.highlight};
   margin-bottom: 20px;
 `;
 
