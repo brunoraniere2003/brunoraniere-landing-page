@@ -1,5 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from '../../styles/variables';
+
+// Animação de pulsação suave
+const pulse = keyframes`
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+`;
 
 export const TimelineContainer = styled.section`
   padding: 40px 0;
@@ -74,6 +84,7 @@ export const CardSubtitle = styled.p`
   font-size: 0.9em;
   margin-top: 5px;
   color: ${colors.text};
+  animation: ${pulse} 2.1s ease-in-out infinite; /* Animação de pulsação */
 `;
 
 export const CardDescription = styled.p`
@@ -84,4 +95,5 @@ export const CardDescription = styled.p`
 export const CardBackSubtitle = styled.p`
   font-size: 0.9em;
   color: ${colors.highlight};
+  animation: ${pulse} 2.1s ease-in-out infinite; /* Animação de pulsação */
 `;

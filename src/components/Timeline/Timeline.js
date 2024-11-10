@@ -54,7 +54,7 @@ const FlipCard = ({ title, description }) => {
       </CardFront>
       <CardBack>
         <CardDescription>{description}</CardDescription>
-        <CardBackSubtitle>arraste para o lado</CardBackSubtitle>
+        <CardBackSubtitle>arraste para o lado {'>>'}</CardBackSubtitle>
       </CardBack>
     </Card>
   );
