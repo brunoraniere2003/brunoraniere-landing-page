@@ -8,7 +8,7 @@ const Header = () => {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    const offset = 40; // ajuste o valor do offset conforme necessário
+    const offset = -40; // ajuste o valor do offset conforme necessário
     if (section) {
       const topPosition = section.getBoundingClientRect().top + window.pageYOffset + offset;
       window.scrollTo({ top: topPosition, behavior: 'smooth' });
