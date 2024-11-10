@@ -3,12 +3,11 @@ import { colors } from '../../styles/variables';
 
 export const TimelineContainer = styled.section`
   padding: 40px 0;
-  max-width: 90vw; /* Limita a largura do container */
+  max-width: 90vw;
   margin: 0 auto;
   text-align: center;
-  overflow: hidden; /* Impede transbordamento lateral */
+  overflow: hidden;
 `;
-
 
 export const SectionTitle = styled.h2`
   font-size: 2em;
@@ -16,19 +15,23 @@ export const SectionTitle = styled.h2`
   margin-bottom: 20px;
 `;
 
+// Wrapper para garantir espaçamento entre os cards
+export const CardWrapper = styled.div`
+  padding: 0 10px; /* Espaço lateral entre os cards */
+`;
+
 export const Card = styled.div`
   perspective: 1000px;
   width: 100%;
-  height: 400px; /* Mantendo a altura vertical */
+  height: 400px;
   cursor: pointer;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
   transform: ${({ flipped }) => (flipped ? "rotateY(180deg)" : "rotateY(0deg)")};
-  border: 2px solid ${colors.highlight}; /* Adiciona borda */
-  border-radius: 10px; /* Arredonda os cantos */
+  border: 2px solid ${colors.highlight};
+  border-radius: 10px;
 `;
-
 
 export const CardFront = styled.div`
   position: absolute;
@@ -58,9 +61,8 @@ export const CardBack = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
   padding: 10px;
-  overflow-y: auto; /* Adiciona barra de rolagem interna */
+  overflow-y: auto;
 `;
-
 
 export const CardTitle = styled.h3`
   font-size: 1.5em;
