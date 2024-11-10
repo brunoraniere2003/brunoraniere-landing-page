@@ -16,5 +16,6 @@ jobs:
         host: ${{ secrets.HOST }} 
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASS }}
-        remoteDir: "public_html"  # Verifique o diretório remoto na Locaweb
-        forceSsl: true
+        localDir: "build"  # Verifique se o diretório está correto
+        remoteDir: "public_html"  # Altere conforme o diretório remoto correto
+        forceSsl: false  # Desativa SSL
