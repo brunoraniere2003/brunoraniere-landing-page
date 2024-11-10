@@ -1,6 +1,7 @@
 import React from 'react';
 import Typing from 'react-typing-effect';
 import { HeroContainer, Title, Subtitle, ButtonGroup, Button } from './HeroStyle';
+import { colors } from '../../styles/variables'; // Importa as cores para usar o salmão
 
 const Hero = () => (
   <HeroContainer>
@@ -14,9 +15,11 @@ const Hero = () => (
         cursor="|"
       />
     </Title>
-    <Subtitle>Um jovem completamente apaixonado por tecnologia</Subtitle>
+    <Subtitle>
+      Um jovem completamente <span style={{ color: colors.highlight }}>apaixonado</span> por <span style={{ color: colors.highlight }}>tecnologia</span>
+    </Subtitle>
     <ButtonGroup>
-      <Button primary>Saiba Mais</Button>
+      <Button $primary>Saiba Mais</Button>
       <Button>Contato</Button>
     </ButtonGroup>
   </HeroContainer>

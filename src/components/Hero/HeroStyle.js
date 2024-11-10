@@ -1,3 +1,5 @@
+// HeroStyle.js
+
 import styled from 'styled-components';
 import { colors } from '../../styles/variables';
 
@@ -44,7 +46,7 @@ export const HeroContainer = styled.section`
 `;
 
 export const Title = styled.h1`
-  color: ${colors.highlight};
+  // color: ${colors.highlight};
   font-size: 2.5em;
   margin-bottom: 1em;
   max-width: 90%;
@@ -81,9 +83,9 @@ export const ButtonGroup = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: ${({ primary }) => (primary ? colors.highlight : 'transparent')};
-  color: ${({ primary }) => (primary ? '#fff' : colors.highlight)};
-  border: ${({ primary }) => (primary ? 'none' : `2px solid ${colors.highlight}`)};
+  background-color: ${({ $primary }) => ($primary ? colors.highlight : 'transparent')};
+  color: ${({ $primary }) => ($primary ? '#fff' : colors.highlight)};
+  border: ${({ $primary }) => ($primary ? 'none' : `2px solid ${colors.highlight}`)};
   padding: 9px 18px;
   border-radius: 5px;
   cursor: pointer;

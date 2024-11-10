@@ -6,17 +6,22 @@ const Header = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false); // Fecha o menu após o clique
+    }
+  };
+
   return (
     <HeaderContainer>
       <Logo>Bruno Raniere</Logo>
       <MenuIcon onClick={toggleMenu}>☰</MenuIcon>
       {menuOpen && (
         <MenuList>
-          {/* <MenuItem href="#sobre-mim">Sobre Mim</MenuItem> */}
-          <MenuItem href="#timeline">Timeline</MenuItem>
-          {/* <MenuItem href="#valores">Valores</MenuItem> */}
-          {/* <MenuItem href="#curiosidades">Curiosidades</MenuItem> */}
-          <MenuItem href="#contato">Contato</MenuItem>
+          <MenuItem onClick={() => scrollToSection('timeline')}>Timeline</MenuItem>
+          <MenuItem onClick={() => scrollToSection('redes-sociais')}>Redes Sociais</MenuItem>
         </MenuList>
       )}
     </HeaderContainer>

@@ -9,18 +9,28 @@ export const RedesContainer = styled.section`
 
 export const SectionTitle = styled.h2`
   color: ${colors.text};
-  font-size: 2em;
-  margin-bottom: 1em;
+  font-size: 1.9em;
+  margin-bottom: 0.5em;
 `;
 
-export const SocialLink = styled.a`
-  display: block;
-  color: ${colors.highlight};
-  font-size: 1.2em;
-  margin: 10px 0;
-  text-decoration: none;
+export const Subtitle = styled.p`
+  color: ${colors.text};
+  font-size: 1.1em;
+  margin-bottom: 0.9em;
 
-  &:hover {
-    opacity: 0.8;
+  span {
+    color: ${colors.highlight};
+  }
+`;
+
+export const EmbedContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 `;
