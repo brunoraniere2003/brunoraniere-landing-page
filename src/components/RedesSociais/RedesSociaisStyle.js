@@ -15,7 +15,7 @@ export const SectionTitle = styled.h2`
 
 export const Subtitle = styled.p`
   color: ${colors.text};
-  font-size: 1.1em;
+  font-size: 0.9em;
   margin-bottom: 0.9em;
 
   span {
