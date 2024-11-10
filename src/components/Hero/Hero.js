@@ -6,7 +6,8 @@ import { colors } from '../../styles/variables';
 const Hero = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    const offset = -80; // ajuste o valor do offset conforme necessário
+    const offset = 0; // ajuste conforme necessário para o espaço superior
+
     if (section) {
       const topPosition = section.getBoundingClientRect().top + window.pageYOffset + offset;
       window.scrollTo({ top: topPosition, behavior: 'smooth' });
