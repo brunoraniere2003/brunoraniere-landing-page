@@ -17,11 +17,11 @@ function App() {
       <GlobalStyle />
       <Header />
       <Hero />
-      <SobreMim />
+      {/* <SobreMim /> */}
       <Timeline />
-      <Valores />
-      <Curiosidades />
-      <EmBreve />
+      {/* <Valores /> */}
+      {/* <Curiosidades /> */}
+      {/* <EmBreve /> */}
       <RedesSociais />
     </>
   );

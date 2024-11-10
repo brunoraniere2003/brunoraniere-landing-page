@@ -15,9 +15,8 @@ export const SectionTitle = styled.h2`
   margin-bottom: 20px;
 `;
 
-// Wrapper para garantir espaçamento entre os cards
 export const CardWrapper = styled.div`
-  padding: 0 10px; /* Espaço lateral entre os cards */
+  padding: 0 10px;
 `;
 
 export const Card = styled.div`
@@ -40,11 +39,13 @@ export const CardFront = styled.div`
   background-color: ${colors.background};
   color: ${colors.highlight};
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   backface-visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 `;
 
 export const CardBack = styled.div`
@@ -54,6 +55,7 @@ export const CardBack = styled.div`
   background-color: ${colors.backgroundLight};
   color: ${colors.text};
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   backface-visibility: hidden;
@@ -67,9 +69,24 @@ export const CardBack = styled.div`
 export const CardTitle = styled.h3`
   font-size: 1.5em;
   color: ${colors.highlight};
+  margin-bottom: 0.3em;
+`;
+
+export const CardSubtitle = styled.p`
+  font-size: 0.8em; /* Reduzi um pouco o tamanho */
+  color: ${colors.text};
+  margin-top: 0.5em;
 `;
 
 export const CardDescription = styled.p`
   font-size: 1.2em;
   padding: 20px;
+  text-align: center;
+`;
+
+export const CardBackSubtitle = styled.p`
+  font-size: 0.8em; /* Reduzi um pouco o tamanho */
+  color: ${colors.text};
+  margin-top: 1em;
+  text-align: center;
 `;

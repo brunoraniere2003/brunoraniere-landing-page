@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import { TimelineContainer, SectionTitle, CardWrapper, Card, CardFront, CardBack, CardTitle, CardDescription } from './TimelineStyle';
+import { TimelineContainer, SectionTitle, CardWrapper, Card, CardFront, CardBack, CardTitle, CardSubtitle, CardDescription, CardBackSubtitle } from './TimelineStyle';
 
 const events = [
   { title: "Início da Carreira", description: "Primeiros passos no mundo da programação." },
@@ -16,7 +16,7 @@ const Timeline = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "20px", // Adiciona espaço entre os cards
+    centerPadding: "20px",
   };
 
   return (
@@ -44,9 +44,11 @@ const FlipCard = ({ title, description }) => {
     <Card onClick={handleFlip} flipped={flipped}>
       <CardFront>
         <CardTitle>{title}</CardTitle>
+        <CardSubtitle>toque no card</CardSubtitle>
       </CardFront>
       <CardBack>
         <CardDescription>{description}</CardDescription>
+        <CardBackSubtitle>arraste para o lado</CardBackSubtitle> {/* Novo subtítulo no verso */}
       </CardBack>
     </Card>
   );

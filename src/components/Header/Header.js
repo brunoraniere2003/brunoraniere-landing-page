@@ -12,10 +12,10 @@ const Header = () => {
       <MenuIcon onClick={toggleMenu}>☰</MenuIcon>
       {menuOpen && (
         <MenuList>
-          <MenuItem href="#sobre-mim">Sobre Mim</MenuItem>
+          {/* <MenuItem href="#sobre-mim">Sobre Mim</MenuItem> */}
           <MenuItem href="#timeline">Timeline</MenuItem>
-          <MenuItem href="#valores">Valores</MenuItem>
-          <MenuItem href="#curiosidades">Curiosidades</MenuItem>
+          {/* <MenuItem href="#valores">Valores</MenuItem> */}
+          {/* <MenuItem href="#curiosidades">Curiosidades</MenuItem> */}
           <MenuItem href="#contato">Contato</MenuItem>
         </MenuList>
       )}
