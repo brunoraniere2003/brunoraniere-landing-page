@@ -16,6 +16,5 @@ jobs:
         host: ${{ secrets.HOST }} 
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASS }}
-        localDir: "build"  # Agora aponta para a pasta correta
         remoteDir: "public_html"  # Verifique o diretório remoto na Locaweb
         forceSsl: true
