@@ -6,10 +6,12 @@ const Header = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    const offset = -80; // ajuste o valor do offset conforme necessário
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      const topPosition = section.getBoundingClientRect().top + window.pageYOffset + offset;
+      window.scrollTo({ top: topPosition, behavior: 'smooth' });
       setMenuOpen(false); // Fecha o menu após o clique
     }
   };

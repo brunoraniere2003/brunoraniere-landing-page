@@ -20,7 +20,7 @@ export const TimelineContainer = styled.section`
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 2em;
+  font-size: 1.7em;
   margin-bottom: 20px;
 `;
 

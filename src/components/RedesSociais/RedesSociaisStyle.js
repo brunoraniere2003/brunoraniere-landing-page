@@ -9,7 +9,7 @@ export const RedesContainer = styled.section`
 
 export const SectionTitle = styled.h2`
   color: ${colors.text};
-  font-size: 1.9em;
+  font-size: 1.7em;
   margin-bottom: 0.5em;
 `;
 

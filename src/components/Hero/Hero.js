@@ -5,7 +5,12 @@ import { colors } from '../../styles/variables';
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    const section = document.getElementById(sectionId);
+    const offset = -80; // ajuste o valor do offset conforme necessário
+    if (section) {
+      const topPosition = section.getBoundingClientRect().top + window.pageYOffset + offset;
+      window.scrollTo({ top: topPosition, behavior: 'smooth' });
+    }
   };
 
   return (
