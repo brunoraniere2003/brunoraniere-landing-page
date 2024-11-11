@@ -1,31 +1,6 @@
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-import { TimelineContainer, SectionTitle, CardWrapper, Card, CardFront, CardBack, CardTitle, CardSubtitle, CardDescription, CardBackSubtitle } from './TimelineStyle';
-import { colors } from '../../styles/variables';
-
-// Componentes para as setas
-const Arrow = ({ onClick, direction }) => (
-  <div 
-    onClick={onClick} 
-    style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      position: 'absolute',
-      top: '50%',
-      height: '40%', // Ajusta altura da área de clique
-      width: '50px', // Ajusta largura da área de clique
-      [direction]: '10px', // Distância da borda
-      transform: 'translateY(-50%)',
-      zIndex: 2,
-      cursor: 'pointer',
-      fontSize: '2em', // Tamanho da seta
-      color: colors.highlight, // Cor das setas
-    }}
-  >
-    {direction === 'left' ? '<' : '>'}
-  </div>
-);
+// Timeline.js
+import React from 'react';
+import { TimelineContainer, SectionTitle, CardsContainer, CardWrapper, Card, CardFront, CardBack, CardTitle, CardSubtitle, CardDescription, CardBackSubtitle } from './TimelineStyle';
 
 const events = [
   { title: "Primeira venda", description: "Aos 4 anos de idade fiz minha primeira venda, entregando ao mercado (minha família) adesivos de caderno." },
@@ -40,34 +15,22 @@ const events = [
 ];
 
 const Timeline = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "0px",
-    prevArrow: <Arrow direction="left" />,
-    nextArrow: <Arrow direction="right" />,
-  };
-
   return (
     <TimelineContainer>
       <SectionTitle>Timeline</SectionTitle>
-      <Slider {...settings}>
+      <CardsContainer>
         {events.map((event, index) => (
           <CardWrapper key={index}>
             <FlipCard title={event.title} description={event.description} />
           </CardWrapper>
         ))}
-      </Slider>
+      </CardsContainer>
     </TimelineContainer>
   );
 };
 
 const FlipCard = ({ title, description }) => {
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, setFlipped] = React.useState(false);
 
   const handleFlip = () => {
     setFlipped(!flipped);

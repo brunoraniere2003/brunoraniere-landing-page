@@ -1,3 +1,4 @@
+// TimelineStyle.js
 import styled, { keyframes } from 'styled-components';
 import { colors } from '../../styles/variables';
 
@@ -17,7 +18,7 @@ export const TimelineContainer = styled.section`
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
-  position: relative; /* Para posicionar as setas */
+  position: relative;
 `;
 
 export const SectionTitle = styled.h2`
@@ -25,8 +26,25 @@ export const SectionTitle = styled.h2`
   margin-bottom: 20px;
 `;
 
+export const CardsContainer = styled.div`
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  // padding: 20px 0;
+  max-width: 100%; /* Limita a largura máxima do container */
+
+  /* Remove barra de rolagem no Webkit */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 export const CardWrapper = styled.div`
-  padding: 0 10px; /* Margem entre os cards */
+  scroll-snap-align: start;
+  min-width: 100%;
+  max-width: 90vw; /* Limita a largura máxima do card */
+  flex: 0 0 auto;
 `;
 
 export const Card = styled.div`
@@ -53,7 +71,7 @@ export const CardFront = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  backface-visibility: hidden; /* Safari fix */
+  backface-visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: rotateY(0deg);
@@ -69,17 +87,17 @@ export const CardBack = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  backface-visibility: hidden; /* Safari fix */
+  backface-visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
-  padding: 25px;
+  // padding: 25px;
   overflow-y: auto;
 `;
 
 export const CardTitle = styled.h3`
   font-size: 1.5em;
-  padding: 0 40px;
+  padding: 0px 30px;
   color: ${colors.highlight};
 `;
 
@@ -87,44 +105,16 @@ export const CardSubtitle = styled.p`
   font-size: 0.9em;
   margin-top: 5px;
   color: ${colors.text};
-  animation: ${pulse} 2.1s ease-in-out infinite; /* Animação de pulsação */
+  animation: ${pulse} 2.1s ease-in-out infinite;
 `;
 
 export const CardDescription = styled.p`
   font-size: 1.2em;
-  padding: 20px;
+  padding: 8px 20px;
 `;
 
 export const CardBackSubtitle = styled.p`
   font-size: 0.9em;
   color: ${colors.highlight};
-  animation: ${pulse} 2.1s ease-in-out infinite; /* Animação de pulsação */
-`;
-
-export const Arrow = styled.div`
-  position: absolute !important;
-  top: 50% !important;
-  height: 50% !important;  /* Define uma altura menor, como 50% */
-  width: 80px !important; // Largura da área de clique
-  font-size: 2em !important;
-  color: ${colors.highlight} !important;
-  cursor: pointer;
-  transform: translateY(-50%) !important;
-  z-index: 2 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: color 0.2s;
-
-  &:hover {
-    color: ${colors.highlightHover} !important;
-  }
-`;
-
-export const ArrowLeft = styled(Arrow)`
-  left: -80px !important; /* Afasta a seta da borda esquerda */
-`;
-
-export const ArrowRight = styled(Arrow)`
-  right: -80px !important; /* Afasta a seta da borda direita */
+  animation: ${pulse} 2.1s ease-in-out infinite;
 `;
