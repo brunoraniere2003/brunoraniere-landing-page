@@ -1,10 +1,20 @@
 // RedesSociaisStyle.js
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from '../../styles/variables';
 
+// Animação de pulsação suave, igual à usada na Timeline.js
+const pulse = keyframes`
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+`;
+
 export const RedesContainer = styled.section`
-  padding: 40px 20px 75px; /* Aumenta o padding inferior para 100px */
+  padding: 40px 20px 75px;
   background-color: ${colors.background};
   text-align: center;
 `;
@@ -23,6 +33,14 @@ export const Subtitle = styled.p`
   span {
     color: ${colors.highlight};
   }
+`;
+
+// Texto com animação de pulsação suave igual à da Timeline.js
+export const InteractiveText = styled.p`
+  color: ${colors.highlight};
+  font-size: 0.6em;
+  margin-bottom: 20px;
+  animation: ${pulse} 2.1s ease-in-out infinite;
 `;
 
 export const EmbedContainer = styled.div`

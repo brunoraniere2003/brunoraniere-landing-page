@@ -1,5 +1,6 @@
+// RedesSociais.js
 import React, { useEffect } from 'react';
-import { RedesContainer, SectionTitle, Subtitle, EmbedContainer } from './RedesSociaisStyle';
+import { RedesContainer, SectionTitle, Subtitle, EmbedContainer, InteractiveText } from './RedesSociaisStyle';
 
 const RedesSociais = () => {
   useEffect(() => {
@@ -20,41 +21,14 @@ const RedesSociais = () => {
       <Subtitle>
         Me siga no <span>Instagram</span> e fique conectado!
       </Subtitle>
+      <InteractiveText>post interativo abaixo, clique ou arraste</InteractiveText> {/* Frase pulsante */}
       <EmbedContainer>
         <blockquote
           className="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/_brunoraniere"
-          data-instgrm-version="12"
-          style={{
-            background: '#FFF',
-            border: '0',
-            borderRadius: '3px',
-            boxShadow: '0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)',
-            margin: '1px',
-            maxWidth: '540px',
-            minWidth: '326px',
-            padding: '0',
-            width: '100%',
-          }}
-        >
-          <div style={{ padding: '16px' }}>
-            <a 
-              href="https://www.instagram.com/_brunoraniere" 
-              style={{
-                background: '#FFFFFF',
-                lineHeight: '0',
-                padding: '0 0',
-                textAlign: 'center',
-                textDecoration: 'none',
-                width: '100%',
-              }} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Ver perfil no Instagram
-            </a>
-          </div>
-        </blockquote>
+          data-instgrm-permalink="https://www.instagram.com/p/DCCP3Rduk6k/"
+          data-instgrm-version="14"
+          style={{ maxWidth: '540px', width: '100%' }}
+        ></blockquote>
       </EmbedContainer>
     </RedesContainer>
   );
